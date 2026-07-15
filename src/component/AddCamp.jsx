@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import NavigationBar from './NavigationBar'
 
 const AddCamp = () => {
 
@@ -38,82 +39,63 @@ const AddCamp = () => {
         )
     }
   return (
-    <div>
-            <div className="container">
-                <div className="row">
-                    <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <div className="row g-4">
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+    <div className="page-shell">
+      <div className="app-card">
+        <NavigationBar />
+        <section className="hero-section">
+          <h1>Launch Your Space Camp Registration</h1>
+          <p>Fill in the participant details below to reserve a spot and keep the experience organized from start to finish.</p>
+        </section>
 
-                                <label htmlFor="" className="form-label">Registration ID</label>
-                                <input type="text" className="form-control" name="registrationId" value={input.registrationId} onChange={inputHandler} />
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label"> Participant Id</label>
-                                <input type="text" className="form-control" name="participantId" value={input. participantId} onChange={inputHandler} />
-
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label">Camp Batch</label>
-                                <input type="text" className="form-control" name="campBatch" value={input.campBatch} onChange={inputHandler} />
-
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label">Camp Start date</label>
-                                <input type="date" className="form-control" name="campStartdate" value={input.campStartdate} onChange={inputHandler} />
-
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label">Camp End date</label>
-                                <input type="date" className="form-control" name="campEnddate" value={input.campEnddate} onChange={inputHandler} />
-
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label">Preferred Session</label>
-                                <input type="text" className="form-control" name="preferredSession" value={input.preferredSession} onChange={inputHandler} />
-
-                            </div>
-                            
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label">Accommodation Required</label>
-                                <input type="text" className="form-control" name="Accommodation" value={input.Accommodation} onChange={inputHandler} />
-
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label">Meal Preference</label>
-                                <input type="text" className="form-control" name="MealPreference" value={input.MealPreference} onChange={inputHandler} />
-
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label"> tshirtSize</label>
-                                <input type="text" className="form-control" name="tshirtSize" value={input.tshirtSize} onChange={inputHandler} />
-
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                                <label htmlFor="" className="form-label">Payment Status</label>
-                                <input type="text" className="form-control" name="paymentStatus" value={input.paymentStatus} onChange={inputHandler} />
-
-                            </div>
-                            
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                <button className="btn btn-success" onClick={readValue}>ADD</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className="form-section">
+          <div className="row g-4 form-grid">
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Registration ID</label>
+              <input type="text" className="form-control" name="registrationId" value={input.registrationId} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Participant ID</label>
+              <input type="text" className="form-control" name="participantId" value={input.participantId} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Camp Batch</label>
+              <input type="text" className="form-control" name="campBatch" value={input.campBatch} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Camp Start Date</label>
+              <input type="date" className="form-control" name="campStartdate" value={input.campStartdate} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Camp End Date</label>
+              <input type="date" className="form-control" name="campEnddate" value={input.campEnddate} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Preferred Session</label>
+              <input type="text" className="form-control" name="preferredSession" value={input.preferredSession} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Accommodation Required</label>
+              <input type="text" className="form-control" name="Accommodation" value={input.Accommodation} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Meal Preference</label>
+              <input type="text" className="form-control" name="MealPreference" value={input.MealPreference} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">T-Shirt Size</label>
+              <input type="text" className="form-control" name="tshirtSize" value={input.tshirtSize} onChange={inputHandler} />
+            </div>
+            <div className="col-12 col-sm-6">
+              <label className="form-label">Payment Status</label>
+              <input type="text" className="form-control" name="paymentStatus" value={input.paymentStatus} onChange={inputHandler} />
             </div>
 
-
-
+            <div className="col-12">
+              <button type="button" className="btn primary-btn" onClick={readValue}>Add Registration</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
