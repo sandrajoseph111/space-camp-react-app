@@ -7,12 +7,14 @@ import ParticipantRegistration from './component/ParticipantRegistration'
 import ViewRegistration from './component/ViewRegistration'
 import AddCamp from './component/AddCamp'
 import ViewCamp from './component/ViewCamp'
+import Home from './component/Home'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Home/>
       <ParticipantRegistration />
       <ViewRegistration />
     </>
