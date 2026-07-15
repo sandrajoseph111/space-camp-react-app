@@ -7,6 +7,8 @@ import ParticipantRegistration from './component/ParticipantRegistration'
 import ViewRegistration from './component/ViewRegistration'
 import AddCamp from './component/AddCamp'
 import ViewCamp from './component/ViewCamp'
+import AddConsent from './component/AddConsent'
+import ViewConsent from './component/ViewConsent'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +17,8 @@ function App() {
     <>
       <ParticipantRegistration />
       <ViewRegistration />
+      <AddConsent />
+      <ViewConsent />
     </>
   )
 }
